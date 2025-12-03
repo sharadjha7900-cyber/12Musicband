@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThunderBeats Band</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #111;
+            color: #eee;
+        }
+
+        /* NAVBAR */
+        nav {
+            background: #000;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        nav h1 {
+            color: #ff004f;
+            letter-spacing: 2px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: bold;
+        }
+
+        /* HERO */
+        .hero {
+            height: 75vh;
+            background: url('https://images.unsplash.com/photo-1519677100203-a0e668c92439') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            text-shadow: 2px 2px 10px black;
+            flex-direction: column;
+        }
+        .hero h2 {
+            font-size: 55px;
+            color: #fff;
+        }
+        .hero p {
+            margin-top: 10px;
+            font-size: 20px;
+        }
+
+        section {
+            padding: 60px;
+        }
+        h2.section-title {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 25px;
+            color: #ff004f;
+        }
+
+        /* MUSIC PLAYER */
+        .music-box {
+            max-width: 600px;
+            margin: auto;
+            text-align: center;
+        }
+        .music-box audio {
+            width: 100%;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+
+        /* TOUR DATES */
+        .tour-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .tour-table th, .tour-table td {
+            padding: 15px;
+            border: 1px solid #444;
+        }
+        .tour-table th {
+            background: #222;
+        }
+        .tour-table tr:hover {
+            background: #333;
+        }
+
+        /* MERCH STORE */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+        }
+        .card {
+            background: #222;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+            height: 250px;
+            object-fit: cover;
+        }
+        .price {
+            margin: 10px 0;
+            font-size: 22px;
+            color: #ff004f;
+        }
+        .btn {
+            padding: 10px 20px;
+            background: #ff004f;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        /* GALLERY */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+        .gallery-grid img, .gallery-grid video {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #000;
+            margin-top: 40px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <h1>ThunderBeats</h1>
+        <div>
+            <a href="#music">Music</a>
+            <a href="#tour">Tour</a>
+            <a href="#merch">Merch</a>
+            <a href="#gallery">Gallery</a>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <h2>Feel The Music. Live The Moment.</h2>
+        <p>Official Website of ThunderBeats Band</p>
+    </div>
+
+    <!-- MUSIC PLAYER -->
+    <section id="music">
+        <h2 class="section-title">Latest Tracks</h2>
+
+        <div class="music-box">
+            <h3>🎵 Track: Firestorm</h3>
+            <audio controls>
+                <source src="https://www.kozco.com/tech/LRMonoPhase4.wav" type="audio/wav">
+            </audio>
+
+            <h3 style="margin-top: 35px;">🎵 Track: Midnight Rise</h3>
+            <audio controls>
+                <source src="https://www.kozco.com/tech/piano2.wav" type="audio/wav">
+            </audio>
+        </div>
+    </section>
+
+    <!-- TOUR DATES -->
+    <section id="tour">
+        <h2 class="section-title">Upcoming Tour Dates</h2>
+
+        <table class="tour-table">
+            <tr>
+                <th>Date</th>
+                <th>City</th>
+                <th>Venue</th>
+            </tr>
+
+            <tr>
+                <td>12 Jan 2025</td>
+                <td>Mumbai</td>
+                <td>Royal Arena</td>
+            </tr>
+
+            <tr>
+                <td>28 Feb 2025</td>
+                <td>Delhi</td>
+                <td>RockFest Grounds</td>
+            </tr>
+
+            <tr>
+                <td>16 Mar 2025</td>
+                <td>Bangalore</td>
+                <td>NightWaves Hall</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- MERCH STORE -->
+    <section id="merch">
+        <h2 class="section-title">Merchandise Store</h2>
+
+        <div class="grid">
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab" alt="">
+                <h3>Band T-Shirt</h3>
+                <div class="price">₹799</div>
+                <a class="btn" href="#">Buy Now</a>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f" alt="">
+                <h3>Poster Pack</h3>
+                <div class="price">₹299</div>
+                <a class="btn" href="#">Buy Now</a>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1516900557549-41557d405adf" alt="">
+                <h3>Band Cap</h3>
+                <div class="price">₹499</div>
+                <a class="btn" href="#">Buy Now</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery">
+        <h2 class="section-title">Photo & Video Gallery</h2>
+
+        <div class="gallery-grid">
+            <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d" alt="">
+            <img src="https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2" alt="">
+            <img src="https://images.unsplash.com/photo-1485579149621-3123dd979885" alt="">
+
+            <video controls>
+                <source src="https://samplelib.com/lib/preview/mp4/sample-5s.mp4">
+            </video>
+
+            <video controls>
+                <source src="https://samplelib.com/lib/preview/mp4/sample-10s.mp4">
+            </video>
+        </div>
+    </section>
+
+    <footer>
+        © 2025 ThunderBeats Band | All Rights Reserved
+    </footer>
+
+</body>
+</html>
